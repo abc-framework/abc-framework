@@ -1,0 +1,22 @@
+{
+    "name": "nikolay-twin/abc-framework",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolay Cherpinskiy",
+            "email": "abc-framework@mail.ru"
+        }
+    ],      
+    "require": {
+        "php": ">=7.0",
+        "psr/container": "~1.0",
+        "psr/http-message": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {       
+            "ABC\\": "vendor/abc-framework/",
+            "Abcsoft\\": "vendor/abcsoft/"
+        }
+    }
+} 
