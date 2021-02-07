@@ -47,16 +47,6 @@ class En
         define('ABC_MIDDLWARE_NO_PROCESS',  'Middleware <strong>%s</strong> must have a method process() ');
 
         /**
-        * Template 
-        */ 
-        define('ABC_TPL_DISABLE',              ' the template disabled');
-        define('ABC_NO_TEMPLATE',              ' templates file  does not exist');
-        define('ABC_INVALID_BLOCK',            ' Block <strong>%s</strong> does not exist or incorrect syntax');
-        define('ABC_NO_METHOD_IN_TPL',         ' templating method is not supported');
-        define('ABC_MODEL_NO_SAVE',            ' System failure. Updates are not accepted.');
-        define('ABC_SELECT_NO_TEMPLATE',       ' Cannot select template if values ​​have already been passed to template.');        
-
-        /**
         * Paginator
         */         
         define('ABC_NO_TOTAL',                 ' limit is not set ');

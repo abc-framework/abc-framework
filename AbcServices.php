@@ -36,7 +36,7 @@ class AbcServices
     const MYSQLI        = 'Mysqli';    
     const PDO           = 'Pdo';
     const SQL_DEBUG     = 'SqlDebug';
-    const TEMPLATE      = 'Template';
+    const TEMPLATE      = 'Tpl';
     const TPL_NATIVE    = 'TplNative';
     const URI_MANAGER   = 'UriManager';
     const VALIDATOR     = 'Validator';

@@ -5,6 +5,8 @@ namespace ABC\Core;
 
 use ABC\ABC;
 use ABC\Core\Exception\AbcError;
+use Abcsoft\TPL\Template\Tpl;
+use Abcsoft\TPL\TplNative\TplNative;
 
 /** 
  * Класс Base
@@ -66,9 +68,9 @@ class Base
             AbcError::Logic(ABC_SELECT_NO_TEMPLATE);
         }
        
-        $type = ABC::getConfig('template')['abc_template'];
-        $type = $this->getTypeTpl($type);
-        $this->tpl = ABC::newService($type);
+        $config = ABC::getConfig('template');
+        $type = $this->getTypeTpl($config);
+        $this->tpl = $type === ABC::TEMPLATE ? new Tpl($config) : new TplNative($config);
         $this->tpl->selectTpl($template, $tpl);
     }     
     
@@ -174,9 +176,9 @@ class Base
     *
     * @return string
     */        
-    protected function getTypeTpl($type)
+    protected function getTypeTpl($config)
     { 
-        if (!isset($type) || true === $type) {
+        if (!isset($config['abc_template']) || true === $config['abc_template']) {
             $type = ABC::TEMPLATE;
         } elseif (false === $type) {
             $type = ABC::TPL_NATIVE;
