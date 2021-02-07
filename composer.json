@@ -1,5 +1,5 @@
 {
-    "name": "nikolay-twin/abc-framework",
+    "name": "abc-framework/abc-framework",
     "type": "project",
     "license": "MIT",
     "authors": [
@@ -9,9 +9,7 @@
         }
     ],      
     "require": {
-        "php": ">=7.0",
-        "psr/container": "~1.0",
-        "psr/http-message": "~1.0"
+        "php": ">=7.0"
     },
     "autoload": {
         "psr-4": {       
