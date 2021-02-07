@@ -34,7 +34,7 @@ class Configurator
         if (!empty($this->config['helpers'])) {
          
             foreach($this->config['helpers'] as $helper){
-                include_once __DIR__ .'/../../../'. $this->config['settings']['application'] 
+                include_once __DIR__ .'/../../../../'. $this->config['settings']['application'] 
                 . ABC_DS . 
                 $this->config['settings']['dir_helpers'] 
                 . ABC_DS . $helper .'.php';

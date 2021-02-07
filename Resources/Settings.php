@@ -75,7 +75,7 @@ class Settings
                 // Шаблонизатор (по умолчанию встроенный)
                 'abc_template'    => true,
                 // Путь до каталога с шаблонами  
-                'dir_template'    => dirname(dirname(dirname(__DIR__)))
+                'dir_template'    => dirname(dirname(dirname(dirname(__DIR__))))
                                    . ABC_DS .'www'. ABC_DS .'theme'
                                    . ABC_DS .'tpl'. ABC_DS, 
                 // Макет (главный шаблон), если он используется
@@ -102,7 +102,7 @@ class Settings
             // Миграции
             'migrations'  => [
                 // Путь до директории с миграциями
-                'dir'        => dirname(dirname(dirname(__DIR__)))
+                'dir'        => dirname(dirname(dirname(dirname(__DIR__))))
                 . ABC_DS .'App'. ABC_DS .'Domain' 
                 . ABC_DS .'Sources'. ABC_DS .'Migrations'. ABC_DS,    
                 // Область видимости миграций
