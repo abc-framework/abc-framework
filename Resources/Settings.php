@@ -77,7 +77,7 @@ class Settings
                 // Путь до каталога с шаблонами  
                 'dir_template'    => dirname(dirname(dirname(dirname(__DIR__))))
                                    . ABC_DS .'www'. ABC_DS .'theme'
-                                   . ABC_DS .'tpl'. ABC_DS, 
+                                   . ABC_DS .'tpl', 
                 // Макет (главный шаблон), если он используется
                 'layout'          => 'index',
                 // Расширение файлов шаблонов

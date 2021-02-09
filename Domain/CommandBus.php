@@ -104,9 +104,9 @@ class CommandBus
         $className = get_class($command);
         $className = str_replace('\\', DIRECTORY_SEPARATOR, $className);
         $commandName = basename($className);
-        $rawName = substr($commandName, 0, -7); 
+        $rawName = substr($commandName, 0, -7);
         $type  = ('Read' === substr($rawName, -4)) ? 'Reader' : 'Writer';
-        $serviceName = substr($rawName, 0, -(strlen($type) - 2)) . $type;
+        $serviceName = preg_replace('~(.+?)Read|Write$~', '$1', $rawName) . $type;
         $serviceClassName = $this->namespace .'\\'. $serviceName;
      
         if(!empty($this->serviceLocator)){
